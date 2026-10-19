@@ -231,6 +231,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: build-bin-${{ github.job }}
           path: |
             yt-dlp
@@ -302,6 +303,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: build-bin-${{ matrix.os }}_${{ matrix.arch }}
           path: |
             dist/${{ matrix.exe }}*
@@ -401,6 +403,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: build-bin-${{ github.job }}
           path: |
             dist/yt-dlp_macos
@@ -521,6 +524,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: build-bin-${{ github.job }}-${{ matrix.arch }}
           path: |
             dist/yt-dlp${{ env.SUFFIX }}.exe
@@ -608,6 +612,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 1
           name: build-${{ github.job }}
           path: |
             _update_spec
